@@ -1432,22 +1432,24 @@ button {
   }
 
   .hero-content-row {
-    padding-top: 10px;
-    gap: 16px;
+    padding-top: 48px;
+    gap: 20px;
   }
 
   .hero-left-col {
+    padding-top: 10px;
     padding-bottom: 10px;
     max-width: 100%;
   }
 
   .hero-heading {
+    margin-top: 14px;
     font-size: clamp(1.68rem, 6.2vw, 2.15rem);
     line-height: 1.24;
     letter-spacing: -0.015em;
     word-break: normal;
     overflow-wrap: break-word;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
   }
 
   .text-nowrap,
@@ -1683,7 +1685,12 @@ button {
     height: 34px;
   }
 
+  .hero-content-row {
+    padding-top: 42px;
+  }
+
   .hero-heading {
+    margin-top: 14px;
     font-size: clamp(1.5rem, 6.8vw, 1.82rem);
     line-height: 1.22;
   }
