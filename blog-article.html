@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Understanding Premature Atrial Contractions (PACs) &amp; The Role of ECG | Clarity Medical</title>
+  <meta name="description"
+    content="An in-depth clinical electrophysiology guide on Premature Atrial Contractions (PACs), P-wave morphology, PAC vs PVC diagnostic criteria, and the clinical significance of high-fidelity ECG monitoring.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap"
+    rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/images/clarity-logo.svg">
+</head>
+
+<body class="page-article">
+
+  <!-- Reading Progress Bar -->
+  <div class="reading-progress-track">
+    <div class="reading-progress-bar" id="readingProgressBar"></div>
+  </div>
+
+  <!-- ==========================================================================
+       TOP NAVIGATION BAR
+       ========================================================================== -->
+  <header class="blog-header-nav">
+    <div class="container navbar-inner">
+      <a href="index.html" class="nav-logo-link" aria-label="Clarity Medical Homepage">
+        <img src="assets/images/clarity-logo.png" alt="Clarity Medical Logo" class="nav-logo-img">
+      </a>
+
+      <!-- Desktop & Mobile Navigation Menu -->
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="index.html#home">Home</a></li>
+        <li class="nav-item"><a href="index.html#about">About</a></li>
+        <li class="nav-item"><a href="index.html#products">Products</a></li>
+        <li class="nav-item"><a href="blog.html" class="nav-link-active">Blog</a></li>
+        <li class="nav-item"><a href="index.html#contact">Contact</a></li>
+        <li class="nav-item"><a href="index.html#quote">Become Our Distributor</a></li>
+      </ul>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       BREADCRUMB & ARTICLE HEADER
+       ========================================================================== -->
+  <section class="article-header-section">
+    <div class="container">
+      <!-- Breadcrumbs -->
+      <nav class="article-breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li><span class="bc-sep">/</span></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><span class="bc-sep">/</span></li>
+          <li><a href="blog.html">Cardiology &amp; ECG</a></li>
+          <li><span class="bc-sep">/</span></li>
+          <li class="bc-active" aria-current="page">Premature Atrial Contractions (PACs)</li>
+        </ol>
+      </nav>
+
+      <!-- Article Title & Meta -->
+      <div class="article-heading-block">
+        <div class="article-category-badge-wrap">
+          <span class="article-category-badge">Cardiology &amp; Electrophysiology</span>
+          <span class="article-peer-badge">✓ Peer Reviewed Clinical Guide</span>
+        </div>
+
+        <h1 class="article-main-title">
+          Understanding Premature Atrial Contractions (PACs) and the Role of ECG in Clinical Diagnosis
+        </h1>
+
+        <p class="article-lead-text">
+          A comprehensive breakdown of ectopic atrial pacemakers, P-wave morphology analysis, distinguishing PACs from
+          ventricular extrasystoles, and the indispensable diagnostic power of high-resolution 12-lead ECG monitoring.
+        </p>
+
+        <div class="article-author-bar">
+          <div class="article-author-profile">
+            <div class="author-avatar-badge">VS</div>
+            <div class="author-details">
+              <span class="author-name">Dr. Vivek Sharma, MD (Cardiology)</span>
+              <span class="author-role">Chief Clinical Specialist &amp; Medical Advisor • Clarity Medical</span>
+            </div>
+          </div>
+
+          <div class="article-meta-stats">
+            <span class="article-meta-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              Published: Sept 01, 2026
+            </span>
+            <span class="article-meta-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              6 min read
+            </span>
+          </div>
+        </div>
+
+        <!-- Social Sharing Bar -->
+        <div class="article-share-strip">
+          <span class="share-label">Share this study:</span>
+          <div class="share-buttons-group">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="share-btn share-btn-li"
+              aria-label="Share on LinkedIn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="share-btn share-btn-tw"
+              aria-label="Share on Twitter">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.936 9.936 0 0024 4.59z" />
+              </svg>
+              <span>Twitter</span>
+            </a>
+            <button type="button" class="share-btn share-btn-copy" id="btnCopyLink" aria-label="Copy Article Link">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+              </svg>
+              <span id="copyBtnText">Copy Link</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ARTICLE CONTENT & STICKY SIDEBAR (2-Column Grid)
+       ========================================================================== -->
+  <main class="article-main-container">
+    <div class="container article-layout-grid">
+      <!-- Left: Article Body -->
+      <article class="article-content-column">
+        <!-- Hero Clinical Diagram -->
+        <figure class="article-featured-media">
+          <img src="assets/images/blog-pac-ecg.png"
+            alt="ECG rhythm strip illustrating premature P wave, QRS complex, and compensatory pause"
+            class="article-hero-img">
+          <figcaption class="article-img-caption">
+            <strong>Figure 1:</strong> Typical lead II electrogram recording showing normal sinus beats followed by an
+            ectopic Premature Atrial Contraction (PAC) with altered P' morphology and a non-compensatory pause.
+          </figcaption>
+        </figure>
+
+        <!-- Executive Summary Box -->
+        <div class="article-callout-box summary-callout">
+          <div class="callout-header">
+            <span class="callout-icon">💡</span>
+            <h3 class="callout-title">Clinical Key Takeaways</h3>
+          </div>
+          <ul class="callout-list">
+            <li><strong>Electrophysiological Origin:</strong> PACs arise when an ectopic atrial focus fires before the
+              next scheduled sinoatrial (SA) node impulse.</li>
+            <li><strong>Electrocardiographic Hallmarks:</strong> Characterized by an abnormal, premature P-wave (P'),
+              variable PR interval, usually narrow QRS complex (&lt; 120 ms), and an incomplete compensatory pause.</li>
+            <li><strong>Diagnostic Importance:</strong> While frequently benign, frequent or repetitive PACs can trigger
+              sustained atrial tachyarrhythmias, notably Atrial Fibrillation (AFib) and Atrial Flutter.</li>
+            <li><strong>Equipment Requirement:</strong> Accurate morphological identification requires high-fidelity,
+              low-noise ECG acquisition devices with minimal baseline wander and advanced filtering.</li>
+          </ul>
+        </div>
+
+        <!-- Section 1 -->
+        <section class="article-section" id="section-intro">
+          <h2>1. Introduction to Premature Atrial Contractions (PACs)</h2>
+          <p>
+            Premature Atrial Contractions—often referred to as atrial premature beats (APBs) or premature supraventricular
+            complexes—represent one of the most frequently encountered cardiac rhythm disturbances in both outpatient
+            cardiology clinics and intensive care units (ICUs).
+          </p>
+          <p>
+            A PAC occurs when an irritable site within the atrial myocardium (outside the normal Sinoatrial Node) depolarizes
+            prematurely. This premature atrial depolarization propagates across the atria, enters the Atrioventricular
+            (AV) node, and conducts down the His-Purkinje network to produce a ventricular contraction ahead of the expected
+            sinus rhythm cadence.
+          </p>
+        </section>
+
+        <!-- Section 2 -->
+        <section class="article-section" id="section-mechanisms">
+          <h2>2. Electrophysiological Mechanisms: How PACs Arise</h2>
+          <p>
+            Under normal physiological conditions, the SA node exhibits the steepest Phase 4 spontaneous diastolic
+            depolarization, thereby maintaining dominance as the primary cardiac pacemaker. However, under altered
+            biochemical or structural conditions, latent pacemaker cells in the pulmonary vein ostia, crista terminalis, or
+            coronary sinus can exhibit enhanced automaticity or triggered activity.
+          </p>
+          <p>Key precipitating factors include:</p>
+          <ul>
+            <li><strong>Sympathetic Hyperactivation:</strong> Elevated catecholamine levels due to physical stress, anxiety,
+              excessive caffeine, nicotine, or beta-agonist medications.</li>
+            <li><strong>Atrial Stretch and Remodeling:</strong> Increased atrial cavity pressure resulting from systemic
+              hypertension, mitral valve regurgitation, or congestive heart failure.</li>
+            <li><strong>Electrolyte Imbalances:</strong> Hypokalemia and hypomagnesemia lowering the resting membrane
+              potential threshold.</li>
+            <li><strong>Hypoxia and Hypercapnia:</strong> Frequently seen in chronic obstructive pulmonary disease (COPD) and
+              acute respiratory failure.</li>
+          </ul>
+        </section>
+
+        <!-- Section 3 -->
+        <section class="article-section" id="section-ecg-morphology">
+          <h2>3. Key Electrocardiographic Criteria for PAC Identification</h2>
+          <p>
+            Accurate identification of PACs on a standard 12-lead ECG or continuous bedside telemetry rhythm strip relies on
+            scrutinizing several distinct morphological features:
+          </p>
+
+          <div class="feature-step-card">
+            <h4>A. The Premature P-Wave (P')</h4>
+            <p>
+              The ectopic P-wave occurs earlier than the anticipated sinus P-wave. Because the depolarization vector
+              originates outside the SA node, its morphology differs noticeably from sinus P-waves in the same lead—it may
+              appear peaked, biphasic, flattened, or inverted (particularly in inferior leads II, III, and aVF if originating
+              low in the atrium). Often, the P' is partially superimposed onto the preceding T-wave.
+            </p>
+          </div>
+
+          <div class="feature-step-card">
+            <h4>B. The PR Interval</h4>
+            <p>
+              The PR interval of the premature beat can be normal, shortened, or prolonged depending on the anatomical
+              proximity of the ectopic focus to the AV node and the refractoriness of the AV conduction system at that moment.
+            </p>
+          </div>
+
+          <div class="feature-step-card">
+            <h4>C. QRS Complex Characteristics</h4>
+            <p>
+              In the majority of cases, once the impulse traverses the AV node, it conducts normally through the bundle
+              branches, yielding a normal, narrow QRS complex (&lt; 0.12 s). If the beat reaches the bundle branches during
+              their relative refractory period (aberrant conduction), the QRS may widen, mimicking a ventricular premature
+              beat.
+            </p>
+          </div>
+
+          <div class="feature-step-card">
+            <h4>D. The Non-Compensatory Pause</h4>
+            <p>
+              Unlike Premature Ventricular Contractions (PVCs), which typically present with a full compensatory pause, a PAC
+              usually enters and resets the SA node pacemaker cycle. As a result, the interval from the preceding sinus P-wave
+              to the post-ectopic sinus P-wave is less than two normal P-P intervals (incomplete compensatory pause).
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 4: Comparison Table -->
+        <section class="article-section" id="section-comparison">
+          <h2>4. Differential Diagnosis: PACs vs. PVCs vs. Sinus Arrhythmia</h2>
+          <p>
+            Distinguishing premature supraventricular beats from ventricular ectopy is vital for clinical risk
+            stratification. Below is a comparative overview of key diagnostic criteria:
+          </p>
+
+          <div class="article-table-wrap">
+            <table class="article-comparison-table">
+              <thead>
+                <tr>
+                  <th>Diagnostic Parameter</th>
+                  <th>PAC (Atrial)</th>
+                  <th>PVC (Ventricular)</th>
+                  <th>Sinus Arrhythmia</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Origin</strong></td>
+                  <td>Ectopic Atrial Focus</td>
+                  <td>Ventricular Myocardium / Purkinje</td>
+                  <td>Sinoatrial (SA) Node</td>
+                </tr>
+                <tr>
+                  <td><strong>P-Wave Morphology</strong></td>
+                  <td>Abnormal (P'), premature, may merge with T</td>
+                  <td>Absent or retrograde (after QRS)</td>
+                  <td>Normal sinus morphology in all leads</td>
+                </tr>
+                <tr>
+                  <td><strong>QRS Complex Width</strong></td>
+                  <td>Usually Narrow (&lt; 120 ms)</td>
+                  <td>Wide &amp; Bizarre (&ge; 120 ms)</td>
+                  <td>Normal (&lt; 120 ms)</td>
+                </tr>
+                <tr>
+                  <td><strong>Pause After Beat</strong></td>
+                  <td>Incomplete / Non-compensatory</td>
+                  <td>Complete Compensatory Pause</td>
+                  <td>Phasic respiratory variation (no pause)</td>
+                </tr>
+                <tr>
+                  <td><strong>Clinical Significance</strong></td>
+                  <td>Potential precursor to AFib / SVT</td>
+                  <td>Associated with ischemic / structural disease</td>
+                  <td>Benign physiological variant</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Section 5: Diagnostic Tech -->
+        <section class="article-section" id="section-diagnostic-tech">
+          <h2>5. Role of High-Fidelity ECG Technology in Clinical Detection</h2>
+          <p>
+            Subtle P-wave morphologic shifts can easily be obscured by baseline drift, high-frequency muscle tremor, or power
+            line interference. Clarity Medical’s advanced digital signal acquisition platforms utilize:
+          </p>
+          <ul>
+            <li><strong>High-Resolution 24-Bit ADC Sampling:</strong> Capturing microvolt-level potential differences across
+              all 12 leads simultaneously.</li>
+            <li><strong>TrueTrack™ Baseline Stabilization:</strong> Real-time adaptive filtering that eliminates respiration
+              artifacts without attenuating low-amplitude P-wave vectors.</li>
+            <li><strong>Automated Glasgow Analysis Algorithms:</strong> Rapidly flagging premature beats, calculating ectopic
+              burden, and distinguishing aberrant supraventricular conduction from true ventricular ectopy.</li>
+          </ul>
+
+          <div class="article-callout-box equipment-highlight-callout">
+            <div class="callout-header">
+              <span class="callout-icon">🩺</span>
+              <h3 class="callout-title">Clinical Equipment Integration</h3>
+            </div>
+            <p>
+              In acute care and telemetry wards, Clarity Medical's <strong>Recobro Vigile®</strong> and multi-channel
+              diagnostic ECG workstations provide 24/7 continuous beat-by-beat arrhythmia monitoring, triggering proactive
+              alerts when frequent PAC runs occur.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 6: Clinical Management -->
+        <section class="article-section" id="section-management">
+          <h2>6. Clinical Management &amp; Prognosis</h2>
+          <p>
+            In asymptomatic individuals with structurally normal hearts, isolated PACs are benign and require no
+            pharmacological treatment beyond lifestyle modifications (reducing stimulants, managing stress, and correcting
+            electrolyte deficits).
+          </p>
+          <p>
+            However, when PACs occur in high frequency (e.g., &gt; 720 PACs / 24 hours on Holter monitoring) or manifest as
+            atrial bigeminy/trigeminy in patients with structural heart disease, they serve as powerful independent predictors
+            of future Atrial Fibrillation, ischemic stroke, and cardiovascular mortality. In such cases, beta-blockers,
+            antiarrhythmic therapy, and comprehensive echocardiographic evaluation are strongly indicated.
+          </p>
+        </section>
+
+        <!-- Author Bio Card -->
+        <div class="article-author-card">
+          <div class="author-avatar-large">VS</div>
+          <div class="author-card-text">
+            <h3>About the Author: Dr. Vivek Sharma, MD</h3>
+            <p class="author-card-role">Chief Clinical Specialist &amp; Medical Devices Advisor</p>
+            <p class="author-card-bio">
+              Dr. Vivek Sharma has over 18 years of clinical experience in cardiac electrophysiology and diagnostic medical
+              device engineering. He collaborates with the Clarity Medical R&amp;D team to develop ISO/CE-certified diagnostic
+              algorithms and bedside monitoring solutions.
+            </p>
+            <a href="index.html#contact" class="author-contact-link">Contact Medical Affairs →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Right: Sticky Sidebar -->
+      <aside class="article-sidebar-column">
+        <!-- Table of Contents Widget -->
+        <div class="sidebar-widget toc-widget" id="sidebarToc">
+          <h3 class="widget-title">Table of Contents</h3>
+          <nav class="toc-nav">
+            <ul class="toc-list">
+              <li><a href="#section-intro" class="toc-link active">1. Introduction to PACs</a></li>
+              <li><a href="#section-mechanisms" class="toc-link">2. Electrophysiological Mechanisms</a></li>
+              <li><a href="#section-ecg-morphology" class="toc-link">3. Electrocardiographic Criteria</a></li>
+              <li><a href="#section-comparison" class="toc-link">4. PAC vs. PVC vs. Sinus Arrhythmia</a></li>
+              <li><a href="#section-diagnostic-tech" class="toc-link">5. High-Fidelity ECG Detection</a></li>
+              <li><a href="#section-management" class="toc-link">6. Clinical Management &amp; Prognosis</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- Featured Product Widget -->
+        <div class="sidebar-widget product-widget">
+          <span class="widget-badge">Featured Clinical Device</span>
+          <img src="assets/images/hero-recobro-vigile.png" alt="Recobro Vigile ICU Grade Patient Monitor"
+            class="widget-product-img">
+          <h4 class="widget-product-title">Recobro Vigile®</h4>
+          <p class="widget-product-subtitle">ICU Grade Portable Patient Monitor with Real-Time Arrhythmia Detection</p>
+          <a href="index.html#products" class="btn-widget-action">Explore Product Details</a>
+        </div>
+
+        <!-- Download Whitepaper Widget -->
+        <div class="sidebar-widget whitepaper-widget">
+          <div class="wp-icon">📄</div>
+          <h4 class="wp-title">Diagnostic ECG Whitepaper</h4>
+          <p class="wp-desc">Download our comprehensive clinical validation study on multi-lead ECG accuracy.</p>
+          <a href="index.html#whitepapers" class="btn-widget-outline">Download Free PDF</a>
+        </div>
+
+        <!-- Newsletter Mini Widget -->
+        <div class="sidebar-widget newsletter-mini-widget">
+          <h4 class="mini-news-title">Subscribe to Clinical Updates</h4>
+          <p class="mini-news-desc">Get the latest peer-reviewed cardiology guides delivered to your inbox.</p>
+          <form class="mini-news-form" id="sidebarNewsletterForm">
+            <input type="email" placeholder="Your work email..." required aria-label="Work email for newsletter">
+            <button type="submit" class="btn-mini-subscribe">Subscribe</button>
+          </form>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       RELATED CLINICAL ARTICLES SECTION
+       ========================================================================== -->
+  <section class="related-articles-section">
+    <div class="container">
+      <div class="related-header">
+        <h2 class="section-title">Related Clinical Articles</h2>
+        <a href="blog.html" class="view-all-blog-link">View All Articles →</a>
+      </div>
+
+      <div class="blog-grid related-grid">
+        <!-- Related 1 -->
+        <article class="blog-card" data-category="cardiology">
+          <div class="blog-card-thumb-wrap">
+            <img src="assets/images/blog-leads-ecg.png" alt="12, 5 & 3 Lead ECG Systems Differences"
+              class="blog-card-thumb">
+            <span class="blog-card-category-badge">Cardiology &amp; ECG</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-meta">
+              <span>Aug 28, 2026</span>
+              <span class="meta-dot">•</span>
+              <span>8 min read</span>
+            </div>
+            <h3 class="blog-card-title">
+              <a href="blog-article.html">Differences Between 12, 5 &amp; 3 Lead ECG Systems &amp; Clinical Significance</a>
+            </h3>
+            <p class="blog-card-excerpt">
+              A comprehensive clinical comparison between standard 12-lead diagnostic electrocardiograms and 5-lead or
+              3-lead continuous patient monitoring systems in ICU and emergency setups.
+            </p>
+            <div class="blog-card-footer">
+              <span class="blog-card-author">By Clinical Team</span>
+              <a href="blog-article.html" class="blog-read-link">Read Article →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Related 2 -->
+        <article class="blog-card" data-category="neurology">
+          <div class="blog-card-thumb-wrap">
+            <img src="assets/images/blog-eeg-brain.png" alt="Encephalopathy and EEG Brain Changes"
+              class="blog-card-thumb">
+            <span class="blog-card-category-badge">Neurology &amp; EEG</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-meta">
+              <span>Aug 18, 2026</span>
+              <span class="meta-dot">•</span>
+              <span>7 min read</span>
+            </div>
+            <h3 class="blog-card-title">
+              <a href="blog-article.html">Encephalopathy and EEG: Understanding Changes in Brain Function</a>
+            </h3>
+            <p class="blog-card-excerpt">
+              How high-channel digital EEG assists neurologists in mapping diffuse background slowing, triphasic waves,
+              and epileptiform discharges during acute encephalopathy.
+            </p>
+            <div class="blog-card-footer">
+              <span class="blog-card-author">By Neurology Research</span>
+              <a href="blog-article.html" class="blog-read-link">Read Article →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Related 3 -->
+        <article class="blog-card" data-category="critical-care">
+          <div class="blog-card-thumb-wrap">
+            <img src="assets/images/blog-tele-icu.jpg" alt="Tele-ICU and Cloud Vitals Monitoring" class="blog-card-thumb">
+            <span class="blog-card-category-badge">Critical Care &amp; ICU</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-meta">
+              <span>Aug 04, 2026</span>
+              <span class="meta-dot">•</span>
+              <span>5 min read</span>
+            </div>
+            <h3 class="blog-card-title">
+              <a href="blog-article.html">The Future of ICU Monitoring: Cloud-Connected Vitals &amp; Tele-ICU</a>
+            </h3>
+            <p class="blog-card-excerpt">
+              Connecting multiparameter patient monitors to secure hospital cloud gateways enables 24/7 central monitoring,
+              early sepsis warnings, and seamless specialist consultations.
+            </p>
+            <div class="blog-card-footer">
+              <span class="blog-card-author">By MedTech Insights</span>
+              <a href="blog-article.html" class="blog-read-link">Read Article →</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER SECTION (Exact 4-Column Layout Matching Main Site)
+       ========================================================================== -->
+  <footer class="site-footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Column 1: About Clarity -->
+        <div class="footer-col footer-col-about">
+          <h3 class="footer-heading">About Clarity</h3>
+          <div class="footer-logo-wrap">
+            <img src="assets/images/clarity-logo.png" alt="Clarity Medical - Since 2003" class="footer-logo-img">
+          </div>
+          <p class="footer-about-text">
+            We design and manufacture medical devices and solutions for hospitals and physicians across the globe.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-link"
+              aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link"
+              aria-label="Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.936 9.936 0 0024 4.59z" />
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-link"
+              aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link"
+              aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-nav-list">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#products">Products</a></li>
+            <li><a href="blog.html">Clinical Blog</a></li>
+            <li><a href="index.html#contact">Contact Us</a></li>
+            <li><a href="index.html#about">Careers</a></li>
+            <li><a href="index.html#contact">Quick Support</a></li>
+            <li><a href="index.html#privacy">Privacy Policy</a></li>
+            <li><a href="index.html#terms">Terms and Condition</a></li>
+            <li><a href="index.html#contact">Become Our Distributor</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Products -->
+        <div class="footer-col">
+          <h3 class="footer-heading">Products</h3>
+          <ul class="footer-nav-list">
+            <li><a href="index.html#products">Patient Monitor</a></li>
+            <li><a href="index.html#products">Fluid Management</a></li>
+            <li><a href="index.html#products">Pulmonology</a></li>
+            <li><a href="index.html#products">EEG Machine</a></li>
+            <li><a href="index.html#products">ECG Machine</a></li>
+            <li><a href="index.html#products">EMG/NCV/EP</a></li>
+            <li><a href="index.html#products">TMT Machine</a></li>
+            <li><a href="index.html#products">Pulse Oximeter</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact Us -->
+        <div class="footer-col footer-col-contact">
+          <h3 class="footer-heading">Contact Us</h3>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <p class="footer-contact-text">
+                1687 A, Sector 82 JLPL Industrial Area,<br>
+                Mohali- 140306, Punjab, India
+              </p>
+            </div>
+
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+              </div>
+              <a href="mailto:contact@clarity-medical.com" class="footer-contact-link">contact@clarity-medical.com</a>
+            </div>
+
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+              </div>
+              <a href="mailto:sales@clarity-medical.com" class="footer-contact-link">sales@clarity-medical.com</a>
+            </div>
+
+            <div class="footer-contact-item footer-phone-group">
+              <div class="footer-contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                  </path>
+                </svg>
+              </div>
+              <div class="footer-phone-numbers">
+                <a href="tel:+919888461890" class="footer-contact-link">+91-9888461890 (India Support)</a>
+                <a href="tel:+919569050051" class="footer-contact-link">+91-9569050051 (Global Support)</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright Bottom Bar -->
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          Clarity Medical and its product names are Registered Trademarks Copyright &copy; 2003-2023 . All rights
+          reserved
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>

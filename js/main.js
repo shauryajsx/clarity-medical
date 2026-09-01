@@ -190,4 +190,206 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 3500);
     });
   }
+
+  // ==========================================================================
+  // Blog Page Interactive Controllers (Category Filter & Live Search)
+  // ==========================================================================
+  const blogSearchInput = document.getElementById("blogSearchInput");
+  const blogSearchClear = document.getElementById("blogSearchClear");
+  const categoryPills = document.querySelectorAll(".category-pill");
+  const blogCards = document.querySelectorAll(".blog-card");
+  const featuredCard = document.querySelector(".featured-blog-card");
+  const articleCountBadge = document.getElementById("articleCountBadge");
+  const noResultsNotice = document.getElementById("noResultsNotice");
+  const btnResetFilters = document.getElementById("btnResetFilters");
+  const blogNewsletterForm = document.getElementById("blogNewsletterForm");
+
+  let activeCategory = "all";
+  let activeSearchQuery = "";
+
+  function filterBlogPosts() {
+    if (!blogCards.length) return;
+
+    let visibleCount = 0;
+    const query = activeSearchQuery.toLowerCase().trim();
+
+    // Filter regular cards
+    blogCards.forEach((card) => {
+      const category = card.dataset.category || "";
+      const title = (card.dataset.title || card.textContent).toLowerCase();
+
+      const matchesCategory = activeCategory === "all" || category === activeCategory;
+      const matchesSearch = !query || title.includes(query);
+
+      if (matchesCategory && matchesSearch) {
+        card.style.display = "flex";
+        visibleCount++;
+      } else {
+        card.style.display = "none";
+      }
+    });
+
+    // Update featured card visibility
+    if (featuredCard) {
+      const featuredCategory = featuredCard.dataset.category || "";
+      const featuredTitle = featuredCard.textContent.toLowerCase();
+      const matchesFeaturedCat = activeCategory === "all" || featuredCategory === activeCategory;
+      const matchesFeaturedSearch = !query || featuredTitle.includes(query);
+
+      if (matchesFeaturedCat && matchesFeaturedSearch) {
+        featuredCard.style.display = "block";
+      } else {
+        featuredCard.style.display = "none";
+      }
+    }
+
+    // Update Count and No Results Notice
+    if (articleCountBadge) {
+      articleCountBadge.textContent = `Showing ${visibleCount} Article${visibleCount === 1 ? '' : 's'}`;
+    }
+
+    if (noResultsNotice) {
+      noResultsNotice.style.display = visibleCount === 0 ? "block" : "none";
+    }
+  }
+
+  // Category Pills Click
+  if (categoryPills.length) {
+    categoryPills.forEach((pill) => {
+      pill.addEventListener("click", () => {
+        categoryPills.forEach((p) => p.classList.remove("active"));
+        pill.classList.add("active");
+        activeCategory = pill.dataset.filter || "all";
+        filterBlogPosts();
+      });
+    });
+  }
+
+  // Live Search
+  if (blogSearchInput) {
+    blogSearchInput.addEventListener("input", (e) => {
+      activeSearchQuery = e.target.value;
+      if (blogSearchClear) {
+        blogSearchClear.style.display = activeSearchQuery.length > 0 ? "block" : "none";
+      }
+      filterBlogPosts();
+    });
+
+    if (blogSearchClear) {
+      blogSearchClear.addEventListener("click", () => {
+        blogSearchInput.value = "";
+        activeSearchQuery = "";
+        blogSearchClear.style.display = "none";
+        blogSearchInput.focus();
+        filterBlogPosts();
+      });
+    }
+  }
+
+  // Reset Filters Button
+  if (btnResetFilters) {
+    btnResetFilters.addEventListener("click", () => {
+      activeCategory = "all";
+      activeSearchQuery = "";
+      if (blogSearchInput) blogSearchInput.value = "";
+      if (blogSearchClear) blogSearchClear.style.display = "none";
+      categoryPills.forEach((p) => p.classList.toggle("active", p.dataset.filter === "all"));
+      filterBlogPosts();
+    });
+  }
+
+  // Blog Newsletter Subscription Form
+  if (blogNewsletterForm) {
+    blogNewsletterForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const submitBtn = blogNewsletterForm.querySelector(".btn-newsletter-subscribe");
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = "Subscribed! ✓";
+      submitBtn.style.backgroundColor = "#10B981";
+      setTimeout(() => {
+        blogNewsletterForm.reset();
+        submitBtn.textContent = originalText;
+        submitBtn.style.backgroundColor = "";
+      }, 3500);
+    });
+  }
+
+  // ==========================================================================
+  // Blog Article Page Controllers (Reading Progress & TOC Scroll-Spy)
+  // ==========================================================================
+  const readingProgressBar = document.getElementById("readingProgressBar");
+  const articleContent = document.querySelector(".article-content-column");
+  const tocLinks = document.querySelectorAll(".toc-link");
+  const articleSections = document.querySelectorAll(".article-section");
+  const btnCopyLink = document.getElementById("btnCopyLink");
+  const copyBtnText = document.getElementById("copyBtnText");
+  const sidebarNewsletterForm = document.getElementById("sidebarNewsletterForm");
+
+  // Reading Progress Bar Calculation
+  if (readingProgressBar && articleContent) {
+    window.addEventListener("scroll", () => {
+      const articleRect = articleContent.getBoundingClientRect();
+      const articleTop = articleContent.offsetTop;
+      const articleHeight = articleContent.offsetHeight;
+      const windowScroll = window.scrollY;
+      const windowHeight = window.innerHeight;
+
+      if (windowScroll >= articleTop - 120) {
+        const scrolled = ((windowScroll - (articleTop - 120)) / (articleHeight - windowHeight + 200)) * 100;
+        readingProgressBar.style.width = `${Math.min(100, Math.max(0, scrolled))}%`;
+      } else {
+        readingProgressBar.style.width = "0%";
+      }
+
+      // TOC Scroll-Spy
+      let currentSectionId = "";
+      articleSections.forEach((section) => {
+        const top = section.offsetTop - 140;
+        if (windowScroll >= top) {
+          currentSectionId = section.getAttribute("id");
+        }
+      });
+
+      if (currentSectionId) {
+        tocLinks.forEach((link) => {
+          link.classList.toggle("active", link.getAttribute("href") === `#${currentSectionId}`);
+        });
+      }
+    }, { passive: true });
+  }
+
+  // Copy Link Button
+  if (btnCopyLink && copyBtnText) {
+    btnCopyLink.addEventListener("click", () => {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(window.location.href).then(() => {
+          const orig = copyBtnText.textContent;
+          copyBtnText.textContent = "Copied! ✓";
+          btnCopyLink.style.borderColor = "#10B981";
+          btnCopyLink.style.color = "#10B981";
+          setTimeout(() => {
+            copyBtnText.textContent = orig;
+            btnCopyLink.style.borderColor = "";
+            btnCopyLink.style.color = "";
+          }, 2500);
+        });
+      }
+    });
+  }
+
+  // Sidebar Newsletter Form
+  if (sidebarNewsletterForm) {
+    sidebarNewsletterForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const btn = sidebarNewsletterForm.querySelector(".btn-mini-subscribe");
+      const orig = btn.textContent;
+      btn.textContent = "Subscribed! ✓";
+      btn.style.backgroundColor = "#10B981";
+      setTimeout(() => {
+        sidebarNewsletterForm.reset();
+        btn.textContent = orig;
+        btn.style.backgroundColor = "";
+      }, 3500);
+    });
+  }
 });

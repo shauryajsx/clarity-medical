@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clinical Insights &amp; Medical Technology Blog | Clarity Medical</title>
+  <meta name="description"
+    content="Explore in-depth clinical articles, diagnostic guides, ICU monitoring research, and medical device innovations from Clarity Medical engineers and clinical specialists.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/images/clarity-logo.svg">
+</head>
+
+<body class="page-blog">
+
+  <!-- ==========================================================================
+       TOP NAVIGATION BAR
+       ========================================================================== -->
+  <header class="blog-header-nav">
+    <div class="container navbar-inner">
+      <a href="index.html" class="nav-logo-link" aria-label="Clarity Medical Homepage">
+        <img src="assets/images/clarity-logo.png" alt="Clarity Medical Logo" class="nav-logo-img">
+      </a>
+
+      <!-- Desktop & Mobile Navigation Menu -->
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="index.html#home">Home</a></li>
+        <li class="nav-item"><a href="index.html#about">About</a></li>
+        <li class="nav-item"><a href="index.html#products">Products</a></li>
+        <li class="nav-item"><a href="blog.html" class="nav-link-active">Blog</a></li>
+        <li class="nav-item"><a href="index.html#contact">Contact</a></li>
+        <li class="nav-item"><a href="index.html#quote">Become Our Distributor</a></li>
+      </ul>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       BLOG HERO BANNER & SEARCH/FILTER
+       ========================================================================== -->
+  <section class="blog-hero-section">
+    <div class="hero-polygon-layer"></div>
+    <div class="hero-glow-layer"></div>
+    <div class="container blog-hero-container">
+      <div class="blog-hero-header">
+        <span class="blog-badge-pill">Clinical Insights &amp; Engineering</span>
+        <h1 class="blog-hero-title">Medical Technology &amp; Healthcare Articles</h1>
+        <p class="blog-hero-subtitle">
+          Explore research-backed diagnostic guides, electrophysiology breakdowns, telemetry advances, and
+          intensive-care equipment innovations from Clarity Medical.
+        </p>
+      </div>
+
+      <!-- Live Search Box -->
+      <div class="blog-search-wrapper">
+        <div class="blog-search-input-box">
+          <svg class="blog-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="blogSearchInput" placeholder="Search clinical topics, ECG, EEG, ICU monitoring..."
+            aria-label="Search blog articles">
+          <button type="button" id="blogSearchClear" class="blog-search-clear" aria-label="Clear search">×</button>
+        </div>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="blog-category-filter" id="categoryFilterGroup">
+        <button class="category-pill active" data-filter="all">All Articles</button>
+        <button class="category-pill" data-filter="cardiology">Cardiology &amp; ECG</button>
+        <button class="category-pill" data-filter="neurology">Neurology &amp; EEG</button>
+        <button class="category-pill" data-filter="critical-care">Critical Care &amp; ICU</button>
+        <button class="category-pill" data-filter="pulmonology">Pulmonology &amp; HFNC</button>
+        <button class="category-pill" data-filter="oximetry">Pulse Oximetry</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FEATURED ARTICLE SPOTLIGHT
+       ========================================================================== -->
+  <section class="blog-featured-section">
+    <div class="container">
+      <div class="featured-blog-card" data-category="cardiology">
+        <div class="featured-blog-grid">
+          <!-- Thumbnail Column -->
+          <div class="featured-blog-thumb-wrap">
+            <img src="assets/images/blog-pac-ecg.png"
+              alt="Understanding Premature Atrial Contractions (PACs) and the Role of ECG in Diagnosis"
+              class="featured-blog-thumb">
+            <span class="featured-tag-badge">★ Featured Clinical Study</span>
+          </div>
+
+          <!-- Content Column -->
+          <div class="featured-blog-content">
+            <div class="blog-post-meta">
+              <span class="blog-category-tag">Cardiology &amp; ECG</span>
+              <span class="meta-dot">•</span>
+              <span class="blog-date">Sept 01, 2026</span>
+              <span class="meta-dot">•</span>
+              <span class="blog-read-time">6 min read</span>
+            </div>
+
+            <h2 class="featured-blog-title">
+              <a href="blog-article.html">Understanding Premature Atrial Contractions (PACs) &amp; The Role of ECG in
+                Diagnosis</a>
+            </h2>
+
+            <p class="featured-blog-excerpt">
+              Explore the electrophysiological mechanisms underlying Premature Atrial Contractions (PACs), distinguishing
+              ectopic P-waves from ventricular abnormalities, and how high-fidelity multi-lead ECG acquisition enhances
+              arrhythmia detection accuracy in outpatient and critical care settings.
+            </p>
+
+            <div class="featured-blog-footer">
+              <div class="blog-author-info">
+                <div class="author-avatar-badge">CM</div>
+                <div>
+                  <h4 class="author-name">Dr. Vivek Sharma</h4>
+                  <span class="author-title">Chief Clinical Specialist, Clarity Medical</span>
+                </div>
+              </div>
+
+              <a href="blog-article.html" class="btn-read-featured">
+                <span>Read Full Article</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       MAIN BLOG POSTS GRID
+       ========================================================================== -->
+  <section class="blog-posts-section">
+    <div class="container">
+      <div class="blog-section-header">
+        <h2 class="section-title">Latest Clinical Articles</h2>
+        <span class="article-count" id="articleCountBadge">Showing 6 Articles</span>
+      </div>
+
+      <!-- No Results Notice (hidden by default) -->
+      <div class="blog-no-results" id="noResultsNotice" style="display: none;">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <h3>No articles found</h3>
+        <p>Try searching with different keywords or switch category filters.</p>
+        <button class="btn-reset-filters" id="btnResetFilters">Reset All Filters</button>
+      </div>
+
+      <div class="blog-grid" id="blogGrid">
+        <!-- Post 1: ECG Leads -->
+        <article class="blog-card" data-category="cardiology"
+          data-title="Understanding the Differences Between 12, 5 & 3 Lead ECG Systems and their Clinical Significance">
+          <div class="blog-card-thumb-wrap">
+            <img src="assets/images/blog-leads-ecg.png"
+              alt="Understanding Differences Between 12, 5 & 3 Lead ECG Systems" class="blog-card-thumb">
+            <span class="blog-card-category-badge">Cardiology &amp; ECG</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-meta">
+              <span>Aug 28, 2026</span>
+              <span class="meta-dot">•</span>
+              <span>8 min read</span>
+            </div>
+            <h3 class="blog-card-title">
+              <a href="blog-article.html">Differences Between 12, 5 &amp; 3 Lead ECG Systems &amp; Clinical Significance</a>
+            </h3>
+            <p class="blog-card-excerpt">
+              A comprehensive clinical comparison between standard 12-lead diagnostic electrocardiograms and 5-lead or
+              3-lead continuous patient monitoring systems in ICU and emergency setups.
+            </p>
+            <div class="blog-card-footer">
+              <span class="blog-card-author">By Clinical Team</span>
+              <a href="blog-article.html" class="blog-read-link">Read Article →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Post 2: EEG Encephalopathy -->
+        <article class="blog-card" data-category="neurology"
+          data-title="Encephalopathy and EEG: Understanding The Changes in Brain Function">
+          <div class="blog-card-thumb-wrap">
+            <img src="assets/images/blog-eeg-brain.png" alt="Encephalopathy and EEG: Changes in Brain Function"
+              class="blog-card-thumb">
+            <span class="blog-card-category-badge">Neurology &amp; EEG</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-meta">
+              <span>Aug 18, 2026</span>
+              <span class="meta-dot">•</span>
+              <span>7 min read</span>
+            </div>
+            <h3 class="blog-card-title">
+              <a href="blog-article.html">Encephalopathy and EEG: Understanding Changes in Brain Function</a>
+            </h3>
+            <p class="blog-card-excerpt">
+              How high-channel digital EEG assists neurologists in mapping diffuse background slowing, triphasic waves,
+              and epileptiform discharges during acute encephalopathy.
+            </p>
+            <div class="blog-card-footer">
+              <span class="blog-card-author">By Neurology Research</span>
+              <a href="blog-article.html" class="blog-read-link">Read Article →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Post 3: Tele-ICU & Cloud Monitoring -->
+        <article class="blog-card" data-category="critical-care"
+          data-title="The Future of ICU Monitoring: Cloud-Connected Patient Vitals and Remote Tele-ICU Solutions">
+          <div class="blog-card-thumb-wrap">
+            <img src="assets/images/blog-tele-icu.jpg" alt="Cloud-Connected Patient Vitals and Remote Tele-ICU Solutions"
+              class="blog-card-thumb">
+            <span class="blog-card-category-badge">Critical Care &amp; ICU</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-meta">
+              <span>Aug 04, 2026</span>
+              <span class="meta-dot">•</span>
+              <span>5 min read</span>
+            </div>
+            <h3 class="blog-card-title">
+              <a href="blog-article.html">The Future of ICU Monitoring: Cloud-Connected Vitals &amp; Tele-ICU</a>
+            </h3>
+            <p class="blog-card-excerpt">
+              Connecting multiparameter patient monitors to secure hospital cloud gateways enables 24/7 central monitoring,
+              early sepsis warnings, and seamless specialist consultations.
+            </p>
+            <div class="blog-card-footer">
+              <span class="blog-card-author">By MedTech Insights</span>
+              <a href="blog-article.html" class="blog-read-link">Read Article →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Post 4: HFNC Therapy -->
+        <article class="blog-card" data-category="pulmonology"
+          data-title="High Flow Nasal Cannula (HFNC) in Acute Respiratory Distress: Clinical Guidelines">
+          <div class="blog-card-thumb-wrap">
+            <img src="assets/images/blog-hfnc-therapy.jpg"
+              alt="High Flow Nasal Cannula (HFNC) in Acute Respiratory Distress" class="blog-card-thumb">
+            <span class="blog-card-category-badge">Pulmonology &amp; HFNC</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-meta">
+              <span>Jul 22, 2026</span>
+              <span class="meta-dot">•</span>
+              <span>6 min read</span>
+            </div>
+            <h3 class="blog-card-title">
+              <a href="blog-article.html">High Flow Nasal Cannula (HFNC) in Acute Respiratory Distress</a>
+            </h3>
+            <p class="blog-card-excerpt">
+              Clinical protocols and physiological benefits of delivering heated, humidified high-flow oxygen up to 60
+              L/min to optimize alveolar recruitment and patient comfort.
+            </p>
+            <div class="blog-card-footer">
+              <span class="blog-card-author">By Pulmonology Group</span>
+              <a href="blog-article.html" class="blog-read-link">Read Article →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Post 5: SpO2 Accuracy -->
+        <article class="blog-card" data-category="oximetry"
+          data-title="Overcoming Low Perfusion and Motion Artifacts in Pulse Oximetry">
+          <div class="blog-card-thumb-wrap">
+            <img src="assets/images/blog-spo2-accuracy.jpg"
+              alt="Overcoming Low Perfusion and Motion Artifacts in Pulse Oximetry" class="blog-card-thumb">
+            <span class="blog-card-category-badge">Pulse Oximetry</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-meta">
+              <span>Jul 12, 2026</span>
+              <span class="meta-dot">•</span>
+              <span>5 min read</span>
+            </div>
+            <h3 class="blog-card-title">
+              <a href="blog-article.html">Overcoming Low Perfusion &amp; Motion Artifacts in SpO2 Monitoring</a>
+            </h3>
+            <p class="blog-card-excerpt">
+              How TrueOxy™ multi-wavelength photoplethysmography filtering isolates true arterial pulses from venous
+              noise during patient movement and low capillary blood flow states.
+            </p>
+            <div class="blog-card-footer">
+              <span class="blog-card-author">By Sensor R&amp;D</span>
+              <a href="blog-article.html" class="blog-read-link">Read Article →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Post 6: Recobro Vigile Transport -->
+        <article class="blog-card" data-category="critical-care"
+          data-title="Recobro Vigile in Ambulatory and Intra-Hospital Patient Transport">
+          <div class="blog-card-thumb-wrap">
+            <img src="assets/images/hero-recobro-vigile.png"
+              alt="Recobro Vigile Portable Patient Monitor Clinical Applications" class="blog-card-thumb">
+            <span class="blog-card-category-badge">Critical Care &amp; ICU</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-meta">
+              <span>Jun 30, 2026</span>
+              <span class="meta-dot">•</span>
+              <span>4 min read</span>
+            </div>
+            <h3 class="blog-card-title">
+              <a href="blog-article.html">Recobro Vigile® in Intra-Hospital &amp; Emergency Transport</a>
+            </h3>
+            <p class="blog-card-excerpt">
+              Uninterrupted 7-parameter monitoring in a lightweight, pocket-sized form factor that bridges bedside ICU care
+              with intra-hospital transit and ambulance deployments.
+            </p>
+            <div class="blog-card-footer">
+              <span class="blog-card-author">By Product Engineering</span>
+              <a href="blog-article.html" class="blog-read-link">Read Article →</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Blog Pagination Controls -->
+      <div class="blog-pagination">
+        <button class="page-btn page-btn-active">1</button>
+        <button class="page-btn">2</button>
+        <button class="page-btn">3</button>
+        <button class="page-btn page-btn-next">Next →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CLINICAL NEWSLETTER SUBSCRIPTION SECTION
+       ========================================================================== -->
+  <section class="blog-newsletter-section">
+    <div class="container">
+      <div class="blog-newsletter-card">
+        <div class="newsletter-icon-wrap">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+        </div>
+        <div class="newsletter-text">
+          <h2 class="newsletter-heading">Stay Updated on Clinical Engineering &amp; MedTech</h2>
+          <p class="newsletter-desc">
+            Receive monthly whitepapers, clinical application notes, and diagnostic case studies directly in your inbox.
+          </p>
+        </div>
+        <form class="newsletter-form" id="blogNewsletterForm">
+          <div class="newsletter-input-group">
+            <input type="email" placeholder="Enter your work or hospital email..." required
+              aria-label="Email address for clinical newsletter">
+            <button type="submit" class="btn-newsletter-subscribe">Subscribe Now</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER SECTION (Exact 4-Column Layout)
+       ========================================================================== -->
+  <footer class="site-footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Column 1: About Clarity -->
+        <div class="footer-col footer-col-about">
+          <h3 class="footer-heading">About Clarity</h3>
+          <div class="footer-logo-wrap">
+            <img src="assets/images/clarity-logo.png" alt="Clarity Medical - Since 2003" class="footer-logo-img">
+          </div>
+          <p class="footer-about-text">
+            We design and manufacture medical devices and solutions for hospitals and physicians across the globe.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-link"
+              aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link"
+              aria-label="Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.936 9.936 0 0024 4.59z" />
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-link"
+              aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link"
+              aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-nav-list">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#products">Products</a></li>
+            <li><a href="blog.html">Clinical Blog</a></li>
+            <li><a href="index.html#contact">Contact Us</a></li>
+            <li><a href="index.html#about">Careers</a></li>
+            <li><a href="index.html#contact">Quick Support</a></li>
+            <li><a href="index.html#privacy">Privacy Policy</a></li>
+            <li><a href="index.html#terms">Terms and Condition</a></li>
+            <li><a href="index.html#contact">Become Our Distributor</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Products -->
+        <div class="footer-col">
+          <h3 class="footer-heading">Products</h3>
+          <ul class="footer-nav-list">
+            <li><a href="index.html#products">Patient Monitor</a></li>
+            <li><a href="index.html#products">Fluid Management</a></li>
+            <li><a href="index.html#products">Pulmonology</a></li>
+            <li><a href="index.html#products">EEG Machine</a></li>
+            <li><a href="index.html#products">ECG Machine</a></li>
+            <li><a href="index.html#products">EMG/NCV/EP</a></li>
+            <li><a href="index.html#products">TMT Machine</a></li>
+            <li><a href="index.html#products">Pulse Oximeter</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact Us -->
+        <div class="footer-col footer-col-contact">
+          <h3 class="footer-heading">Contact Us</h3>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <p class="footer-contact-text">
+                1687 A, Sector 82 JLPL Industrial Area,<br>
+                Mohali- 140306, Punjab, India
+              </p>
+            </div>
+
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+              </div>
+              <a href="mailto:contact@clarity-medical.com" class="footer-contact-link">contact@clarity-medical.com</a>
+            </div>
+
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+              </div>
+              <a href="mailto:sales@clarity-medical.com" class="footer-contact-link">sales@clarity-medical.com</a>
+            </div>
+
+            <div class="footer-contact-item footer-phone-group">
+              <div class="footer-contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                  </path>
+                </svg>
+              </div>
+              <div class="footer-phone-numbers">
+                <a href="tel:+919888461890" class="footer-contact-link">+91-9888461890 (India Support)</a>
+                <a href="tel:+919569050051" class="footer-contact-link">+91-9569050051 (Global Support)</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright Bottom Bar -->
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          Clarity Medical and its product names are Registered Trademarks Copyright &copy; 2003-2023 . All rights
+          reserved
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
