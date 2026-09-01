@@ -1253,4 +1253,24 @@ button {
   .btn-load-more {
     width: 100%;
   }
+  .quote-section {
+    padding: 60px 0;
+  }
+  .quote-card-body {
+    padding: 36px 22px 28px;
+  }
+  .quote-title {
+    font-size: 1.85rem;
+  }
+  .form-row-2col {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .quote-support-footer {
+    padding: 20px 18px;
+  }
+  .support-contact-row {
+    flex-direction: column;
+    gap: 12px;
+  }
 }

@@ -62,4 +62,21 @@ document.addEventListener("DOMContentLoaded", () => {
       whitepapersGrid.scrollBy({ left: -340, behavior: "smooth" });
     });
   }
+
+  // Quote Form Submission Feedback
+  const quoteForm = document.getElementById("quoteForm");
+  if (quoteForm) {
+    quoteForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const submitBtn = quoteForm.querySelector(".btn-request-callback");
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = "Thank you! We'll call you shortly...";
+      submitBtn.style.backgroundColor = "#10B981";
+      setTimeout(() => {
+        quoteForm.reset();
+        submitBtn.textContent = originalText;
+        submitBtn.style.backgroundColor = "";
+      }, 3500);
+    });
+  }
 });
