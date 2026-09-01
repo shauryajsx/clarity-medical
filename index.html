@@ -28,25 +28,23 @@
   <!-- ==========================================================================
        HERO SECTION & NAVIGATION (Pixel-Perfect Reference UI)
        ========================================================================== -->
-  <header class="hero-wrapper" id="home">
-    <!-- Angular geometric shade overlay matching mockup -->
-    <div class="hero-polygon-layer"></div>
-    <div class="hero-glow-layer"></div>
-
-    <!-- Navigation Bar -->
+  <header class="hero-section hero-theme-dark" id="home">
+    <!-- Navbar -->
     <nav class="navbar">
       <div class="container navbar-inner">
-        <!-- Exact Clarity Logo -->
+        <!-- Brand Logo -->
         <a href="#home" class="nav-logo-link">
-          <img src="assets/images/clarity-logo.png" alt="Clarity Medical" class="nav-logo-img">
+          <img src="assets/images/clarity-logo.png" alt="Clarity Medical Logo" class="nav-logo-img">
         </a>
 
-        <!-- Menu Links -->
+        <!-- Desktop Navigation Links -->
         <ul class="nav-menu">
           <li class="nav-item"><a href="#home">Home</a></li>
           <li class="nav-item"><a href="#about">About</a></li>
-          <li class="nav-item"><a href="#solutions">Solutions</a></li>
-          <li class="nav-item"><a href="#products">Product</a></li>
+          <li class="nav-item"><a href="#categories">Categories</a></li>
+          <li class="nav-item"><a href="#whitepapers">Whitepapers</a></li>
+          <li class="nav-item"><a href="#products">Products</a></li>
+          <li class="nav-item"><a href="#events">Events</a></li>
           <li class="nav-item"><a href="#contact">Contact</a></li>
           <li class="nav-item"><a href="#distributor">Become Our Distributor</a></li>
         </ul>
@@ -60,35 +58,93 @@
       </div>
     </nav>
 
-    <!-- Hero Content -->
-    <div class="container hero-content-row">
-      <!-- Left Column: Typography & CTAs -->
-      <div class="hero-left-col">
-        <h1 class="hero-heading">
-          Advanced Diagnostic,<br class="hero-br">
-          <span class="text-nowrap-desktop"><span class="highlight-cyan">Monitoring</span> and <span
-              class="highlight-cyan">Critical-Care</span></span><br class="hero-br">
-          Solutions Designed For<br class="hero-br">
-          <span class="font-light-weight">Healthcare Organizations Worldwide.</span>
-        </h1>
+    <!-- Hero Slider Wrap -->
+    <div class="hero-slider" id="heroSlider">
+      <!-- Slide 1: Healthcare Solutions (Dark Theme) -->
+      <div class="hero-slide active" data-slide="0" data-theme="dark">
+        <div class="hero-polygon-layer"></div>
+        <div class="hero-glow-layer"></div>
+        <div class="container hero-content-row">
+          <!-- Left Column -->
+          <div class="hero-left-col">
+            <h1 class="hero-heading">
+              Advanced Diagnostic,<br class="hero-br">
+              <span class="text-nowrap-desktop"><span class="highlight-cyan">Monitoring</span> and <span
+                  class="highlight-cyan">Critical-Care</span></span><br class="hero-br">
+              Solutions Designed For<br class="hero-br">
+              <span class="font-light-weight">Healthcare Organizations Worldwide.</span>
+            </h1>
 
-        <p class="hero-description">
-          Clarity Medical was established in 2003 with a mission to manufacture &amp; supply high-quality medical
-          equipment across the globe.
-        </p>
+            <p class="hero-description">
+              Clarity Medical was established in 2003 with a mission to manufacture &amp; supply high-quality medical
+              equipment across the globe.
+            </p>
 
-        <div class="hero-cta-group">
-          <a href="#about" class="btn-know-more">Know More</a>
-          <a href="#products" class="btn-explore-product">Explore Product</a>
+            <div class="hero-cta-group">
+              <a href="#about" class="btn-know-more">Know More</a>
+              <a href="#products" class="btn-explore-product">Explore Product</a>
+            </div>
+          </div>
+
+          <!-- Right Column: Doctors & Devices Composite -->
+          <div class="hero-right-col">
+            <div class="hero-image-container">
+              <img src="assets/images/hero-doctors-devices.png" alt="Clarity Medical Clinical Devices and Team"
+                class="hero-composite-img">
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- Right Column: Exact Doctors & Devices Composite -->
-      <div class="hero-right-col">
-        <div class="hero-image-container">
-          <img src="assets/images/hero-doctors-devices.png" alt="Clarity Medical Clinical Devices and Team"
-            class="hero-composite-img">
+      <!-- Slide 2: ICU Grade Portable Patient Monitor (Light Theme - Exact Mockup) -->
+      <div class="hero-slide" data-slide="1" data-theme="light">
+        <div class="container hero-content-row hero-slide-light">
+          <!-- Left Column -->
+          <div class="hero-left-col">
+            <h1 class="hero-heading hero-heading-slide2">
+              <span class="text-dark-hero">ICU GRADE</span><br class="hero-br">
+              <span class="text-dark-hero">PORTABLE</span> <span class="text-blue-hero">PATIENT</span><br class="hero-br">
+              <span class="text-blue-hero">MONITOR</span>
+            </h1>
+
+            <p class="hero-description hero-description-slide2">
+              REAL-TIME PATIENT VITAL TRACKING, 7 PARAMETERS AND MORE
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#products" class="btn-know-more btn-know-more-navy">Know More</a>
+              <a href="#products" class="btn-explore-product btn-explore-product-navy">Explore Product</a>
+            </div>
+          </div>
+
+          <!-- Right Column: Recobro Vigile & App Device Mockup -->
+          <div class="hero-right-col">
+            <div class="hero-image-container hero-img-box-slide2">
+              <img src="assets/images/hero-recobro-vigile.png" alt="ICU Grade Portable Patient Monitor Recobro Vigile"
+                class="hero-composite-img hero-slide2-img">
+            </div>
+          </div>
         </div>
+      </div>
+
+      <!-- Slider Arrows -->
+      <button class="hero-nav-btn hero-nav-prev" id="heroPrev" aria-label="Previous Slide">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+      <button class="hero-nav-btn hero-nav-next" id="heroNext" aria-label="Next Slide">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+
+      <!-- Slider Pagination Dots -->
+      <div class="hero-dots" id="heroDots">
+        <button class="hero-dot active" data-slide-to="0" aria-label="Slide 1"></button>
+        <button class="hero-dot" data-slide-to="1" aria-label="Slide 2"></button>
       </div>
     </div>
   </header>

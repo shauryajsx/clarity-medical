@@ -68,16 +68,24 @@ button {
 }
 
 /* ==========================================================================
-   HERO SECTION WRAPPER
+   HERO SECTION WRAPPER & SLIDER
    ========================================================================== */
-.hero-wrapper {
-  background: linear-gradient(115deg, #07172C 0%, #0A1E38 45%, #0D2647 80%, #0F2C52 100%);
+.hero-section {
   position: relative;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
+  transition: background 0.45s ease;
+}
+
+.hero-section.hero-theme-dark {
+  background: linear-gradient(115deg, #07172C 0%, #0A1E38 45%, #0D2647 80%, #0F2C52 100%);
+}
+
+.hero-section.hero-theme-light {
+  background: #FFFFFF;
 }
 
 /* Subtle Angular Polygon Overlay matching reference UI */
@@ -142,12 +150,20 @@ button {
 .nav-item a {
   font-size: 0.98rem;
   font-weight: 500;
-  color: var(--text-white);
   letter-spacing: 0.2px;
+  transition: color 0.3s ease;
+}
+
+.hero-theme-dark .nav-item a {
+  color: var(--text-white);
+}
+
+.hero-theme-light .nav-item a {
+  color: #081C35;
 }
 
 .nav-item a:hover {
-  color: var(--cyan-primary);
+  color: var(--cyan-primary) !important;
 }
 
 .mobile-toggle {
@@ -166,10 +182,17 @@ button {
 .mobile-toggle span {
   width: 24px;
   height: 2.5px;
-  background-color: var(--text-white);
   border-radius: 2px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
   transform-origin: center;
+}
+
+.hero-theme-dark .mobile-toggle span {
+  background-color: var(--text-white);
+}
+
+.hero-theme-light .mobile-toggle span {
+  background-color: #081C35;
 }
 
 .mobile-toggle.is-active span:nth-child(1) {
@@ -186,10 +209,41 @@ button {
 }
 
 /* ==========================================================================
-   HERO MAIN CONTENT ROW
+   HERO SLIDER & SLIDES
    ========================================================================== */
-.hero-content-row {
+.hero-slider {
   flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: scale(0.98);
+  display: flex;
+  align-items: flex-end;
+}
+
+.hero-slide.active {
+  position: relative;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: scale(1);
+}
+
+.hero-content-row {
+  width: 100%;
   display: grid;
   grid-template-columns: 1.12fr 0.88fr;
   align-items: flex-end;
@@ -204,6 +258,7 @@ button {
   z-index: 3;
 }
 
+/* Slide 1 Typography */
 .hero-heading {
   font-size: 3.35rem;
   font-weight: 700;
@@ -243,13 +298,40 @@ button {
   max-width: 530px;
 }
 
+/* Slide 2 Typography (Exact Mockup) */
+.hero-heading-slide2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.text-dark-hero {
+  color: #0A192F;
+}
+
+.text-blue-hero {
+  color: #124A84;
+}
+
+.hero-description-slide2 {
+  font-size: 1.02rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: #1E293B;
+  text-transform: uppercase;
+  margin-bottom: 42px;
+  max-width: 560px;
+}
+
 .hero-cta-group {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-/* Know More Pill Button */
+/* Know More Pill Button (Slide 1) */
 .btn-know-more {
   display: inline-flex;
   align-items: center;
@@ -271,7 +353,7 @@ button {
   box-shadow: 0 6px 24px rgba(0, 174, 239, 0.5);
 }
 
-/* Explore Product Outline Pill Button */
+/* Explore Product Outline Pill Button (Slide 1) */
 .btn-explore-product {
   display: inline-flex;
   align-items: center;
@@ -294,7 +376,30 @@ button {
   transform: translateY(-2px);
 }
 
-/* Hero Right Column: Exact Doctors & Medical Devices Composite */
+/* Slide 2 Specific Buttons (Exact Dark Navy / Outline Style) */
+.btn-know-more-navy {
+  background-color: #12375C;
+  color: #FFFFFF;
+  box-shadow: 0 4px 18px rgba(18, 55, 92, 0.25);
+}
+
+.btn-know-more-navy:hover {
+  background-color: var(--cyan-primary);
+  box-shadow: 0 6px 24px rgba(0, 174, 239, 0.45);
+}
+
+.btn-explore-product-navy {
+  color: #12375C;
+  border: 2.2px solid #12375C;
+}
+
+.btn-explore-product-navy:hover {
+  border-color: var(--cyan-primary);
+  color: var(--cyan-primary);
+  background: rgba(0, 174, 239, 0.08);
+}
+
+/* Hero Right Column */
 .hero-right-col {
   position: relative;
   display: flex;
@@ -312,6 +417,10 @@ button {
   align-items: flex-end;
 }
 
+.hero-img-box-slide2 {
+  max-width: 620px;
+}
+
 .hero-composite-img {
   width: 100%;
   height: auto;
@@ -319,6 +428,95 @@ button {
   object-fit: contain;
   object-position: bottom right;
   display: block;
+}
+
+.hero-slide2-img {
+  max-height: 560px;
+}
+
+/* ==========================================================================
+   HERO SLIDER NAVIGATION CONTROLS (Arrows & Dots)
+   ========================================================================== */
+.hero-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.25s ease;
+}
+
+.hero-theme-dark .hero-nav-btn {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #FFFFFF;
+}
+
+.hero-theme-light .hero-nav-btn {
+  background: #FFFFFF;
+  border: 1px solid rgba(11, 34, 64, 0.12);
+  color: #081C35;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.hero-nav-prev {
+  left: 24px;
+}
+
+.hero-nav-next {
+  right: 24px;
+}
+
+.hero-nav-btn:hover {
+  background-color: var(--cyan-primary) !important;
+  color: #FFFFFF !important;
+  border-color: var(--cyan-primary) !important;
+  transform: translateY(-50%) scale(1.08);
+  box-shadow: 0 6px 20px rgba(0, 174, 239, 0.4);
+}
+
+.hero-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  z-index: 10;
+}
+
+.hero-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-theme-dark .hero-dot {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.hero-theme-light .hero-dot {
+  background: #CBD5E1;
+}
+
+.hero-dot.active {
+  width: 32px;
+  border-radius: 9999px;
+  background: var(--cyan-primary) !important;
+  box-shadow: 0 2px 10px rgba(0, 174, 239, 0.5);
 }
 
 /* ==========================================================================
@@ -1774,9 +1972,9 @@ button {
   }
 
   /* Hero Section */
-  .hero-wrapper {
+  .hero-section {
     min-height: auto;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
   }
 
   .hero-polygon-layer {
@@ -1812,6 +2010,11 @@ button {
     margin-bottom: 18px;
   }
 
+  .hero-heading-slide2 {
+    font-size: clamp(1.75rem, 6.6vw, 2.25rem);
+    line-height: 1.15;
+  }
+
   .text-nowrap,
   .text-nowrap-desktop {
     white-space: normal;
@@ -1834,6 +2037,11 @@ button {
     max-width: 100%;
   }
 
+  .hero-description-slide2 {
+    font-size: 0.88rem;
+    line-height: 1.45;
+  }
+
   .hero-cta-group {
     flex-direction: column;
     width: 100%;
@@ -1841,7 +2049,9 @@ button {
   }
 
   .btn-know-more,
-  .btn-explore-product {
+  .btn-explore-product,
+  .btn-know-more-navy,
+  .btn-explore-product-navy {
     width: 100%;
     padding: 14px 28px;
     font-size: 1rem;
@@ -1859,6 +2069,18 @@ button {
     width: auto;
     max-width: 100%;
     margin: 0 auto;
+  }
+
+  .hero-slide2-img {
+    max-height: 320px;
+  }
+
+  .hero-nav-btn {
+    display: none;
+  }
+
+  .hero-dots {
+    bottom: 8px;
   }
 
   /* About Us */
