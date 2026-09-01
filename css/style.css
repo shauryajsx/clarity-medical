@@ -72,10 +72,11 @@ button {
    ========================================================================== */
 .hero-section {
   position: relative;
-  min-height: 100vh;
+  min-height: auto;
+  padding-bottom: 36px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   overflow: hidden;
   transition: background 0.45s ease;
 }
@@ -120,7 +121,7 @@ button {
 .navbar {
   position: relative;
   z-index: 10;
-  padding: 40px 0 20px;
+  padding: 24px 0 12px;
 }
 
 .navbar-inner {
@@ -212,11 +213,11 @@ button {
    HERO SLIDER & SLIDES
    ========================================================================== */
 .hero-slider {
-  flex: 1;
   position: relative;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .hero-slide {
@@ -228,10 +229,10 @@ button {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1), transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
   transform: scale(0.98);
   display: flex;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .hero-slide.active {
@@ -246,26 +247,26 @@ button {
   width: 100%;
   display: grid;
   grid-template-columns: 1.12fr 0.88fr;
-  align-items: flex-end;
+  align-items: center;
   position: relative;
   z-index: 2;
-  padding-top: 10px;
+  padding: 18px 0 28px;
 }
 
 .hero-left-col {
-  padding-bottom: 70px;
+  padding-bottom: 20px;
   max-width: 680px;
   z-index: 3;
 }
 
 /* Slide 1 Typography */
 .hero-heading {
-  font-size: 3.35rem;
+  font-size: 3.25rem;
   font-weight: 700;
-  line-height: 1.22;
+  line-height: 1.2;
   letter-spacing: -0.02em;
   color: var(--text-white);
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .highlight-cyan {
@@ -294,17 +295,18 @@ button {
   font-size: 0.98rem;
   line-height: 1.62;
   color: var(--text-muted);
-  margin-bottom: 42px;
+  margin-bottom: 34px;
   max-width: 530px;
 }
 
 /* Slide 2 Typography (Exact Mockup) */
 .hero-heading-slide2 {
-  font-size: 3.5rem;
+  font-size: 3.4rem;
   font-weight: 800;
   line-height: 1.14;
   letter-spacing: -0.02em;
   text-transform: uppercase;
+  margin-bottom: 18px;
 }
 
 .text-dark-hero {
@@ -321,7 +323,7 @@ button {
   letter-spacing: 0.4px;
   color: #1E293B;
   text-transform: uppercase;
-  margin-bottom: 42px;
+  margin-bottom: 34px;
   max-width: 560px;
 }
 
