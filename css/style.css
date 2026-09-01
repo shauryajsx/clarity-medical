@@ -777,8 +777,9 @@ button {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  .about-text-col {
-    padding-left: 0;
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
   }
   .whitepapers-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -828,6 +829,20 @@ button {
   }
   .client-logo-img {
     max-height: 52px;
+  }
+  .products-section {
+    padding: 60px 0;
+  }
+  .products-main-heading {
+    font-size: 2.1rem;
+    margin-bottom: 36px;
+  }
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .btn-view-all-products {
+    width: 100%;
   }
   .whitepapers-section {
     padding: 60px 0;
