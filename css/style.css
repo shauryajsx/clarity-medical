@@ -246,16 +246,19 @@ button {
 .hero-content-row {
   width: 100%;
   display: grid;
-  grid-template-columns: 1.12fr 0.88fr;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
   align-items: center;
   position: relative;
   z-index: 2;
-  padding: 18px 0 28px;
+  padding: 0;
 }
 
 .hero-left-col {
+  padding-left: max(40px, calc((100vw - var(--container-width)) / 2 + 60px));
+  padding-right: 24px;
+  padding-top: 10px;
   padding-bottom: 20px;
-  max-width: 680px;
+  max-width: 720px;
   z-index: 3;
 }
 
@@ -434,33 +437,42 @@ button {
   position: relative;
   display: flex;
   justify-content: flex-end;
-  align-items: flex-end;
+  align-items: center;
   height: 100%;
+  margin-right: 0;
+  padding-right: 0;
 }
 
 .hero-image-container {
   width: 100%;
-  max-width: 670px;
+  max-width: 100%;
   position: relative;
   display: flex;
   justify-content: flex-end;
-  align-items: flex-end;
+  align-items: center;
+  margin-right: 0;
+  padding-right: 0;
 }
 
-.hero-img-box-slide2 {
-  max-width: 620px;
+.hero-img-box-slide2,
+.hero-img-box-slide3 {
+  max-width: 100%;
 }
 
 .hero-composite-img {
-  width: 100%;
+  width: auto;
+  max-width: 100%;
   height: auto;
-  max-height: 610px;
+  max-height: 540px;
   object-fit: contain;
-  object-position: bottom right;
+  object-position: center right;
   display: block;
+  margin-left: auto;
+  margin-right: 0;
 }
 
-.hero-slide2-img {
+.hero-slide2-img,
+.hero-slide3-img {
   max-height: 560px;
 }
 
@@ -1905,16 +1917,23 @@ button {
   }
   .hero-left-col {
     max-width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
     padding-bottom: 20px;
   }
   .hero-heading {
     font-size: 2.6rem;
   }
   .hero-right-col {
+    padding: 0 40px;
     justify-content: center;
   }
   .hero-image-container {
     max-width: 520px;
+  }
+  .hero-composite-img {
+    margin: 0 auto;
+    object-position: center;
   }
   .about-grid {
     grid-template-columns: 1fr;
@@ -2025,6 +2044,8 @@ button {
   }
 
   .hero-left-col {
+    padding-left: 20px;
+    padding-right: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
     max-width: 100%;
