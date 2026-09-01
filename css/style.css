@@ -327,6 +327,34 @@ button {
   max-width: 560px;
 }
 
+/* Slide 3 Typography (Exact Mockup) */
+.hero-heading-slide3 {
+  font-size: 3.6rem;
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.hero-description-slide3-primary {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: #1E293B;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  max-width: 580px;
+}
+
+.hero-description-slide3-secondary {
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: #556987;
+  margin-bottom: 34px;
+  max-width: 540px;
+}
+
 .hero-cta-group {
   display: flex;
   align-items: center;
@@ -2012,7 +2040,8 @@ button {
     margin-bottom: 18px;
   }
 
-  .hero-heading-slide2 {
+  .hero-heading-slide2,
+  .hero-heading-slide3 {
     font-size: clamp(1.75rem, 6.6vw, 2.25rem);
     line-height: 1.15;
   }
@@ -2039,9 +2068,16 @@ button {
     max-width: 100%;
   }
 
-  .hero-description-slide2 {
+  .hero-description-slide2,
+  .hero-description-slide3-primary {
     font-size: 0.88rem;
     line-height: 1.45;
+  }
+
+  .hero-description-slide3-secondary {
+    font-size: 0.86rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
   }
 
   .hero-cta-group {
@@ -2073,7 +2109,8 @@ button {
     margin: 0 auto;
   }
 
-  .hero-slide2-img {
+  .hero-slide2-img,
+  .hero-slide3-img {
     max-height: 320px;
   }
 
