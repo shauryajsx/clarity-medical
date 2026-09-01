@@ -6,21 +6,24 @@ document.addEventListener("DOMContentLoaded", () => {
   // Mobile navigation toggle
   const mobileToggle = document.querySelector(".mobile-toggle");
   const navMenu = document.querySelector(".nav-menu");
+  const navLinks = document.querySelectorAll(".nav-item a");
 
   if (mobileToggle && navMenu) {
     mobileToggle.addEventListener("click", () => {
-      const isOpen = navMenu.style.display === "flex";
-      navMenu.style.display = isOpen ? "none" : "flex";
-      if (!isOpen) {
-        navMenu.style.flexDirection = "column";
-        navMenu.style.position = "absolute";
-        navMenu.style.top = "100%";
-        navMenu.style.left = "0";
-        navMenu.style.right = "0";
-        navMenu.style.background = "rgba(9, 26, 48, 0.95)";
-        navMenu.style.padding = "20px";
-        navMenu.style.backdropFilter = "blur(10px)";
-      }
+      const isActive = navMenu.classList.toggle("is-open");
+      mobileToggle.classList.toggle("is-active", isActive);
+      mobileToggle.setAttribute("aria-expanded", isActive);
+      document.body.style.overflow = isActive ? "hidden" : "";
+    });
+
+    // Close menu when clicking on any nav link
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        navMenu.classList.remove("is-open");
+        mobileToggle.classList.remove("is-active");
+        mobileToggle.setAttribute("aria-expanded", "false");
+        document.body.style.overflow = "";
+      });
     });
   }
 
